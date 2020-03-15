@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/studying_title">
+
+        <ListPreference
+            app:entries="@array/spinner_section"
+            app:entryValues="@array/spinner_section"
+            app:key="@string/key_section_preference"
+            app:title="@string/section"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/spinner_religion"
+            app:entryValues="@array/spinner_religion"
+            app:key="@string/key_religion_preference"
+            app:title="@string/religion"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/spinner_language"
+            app:entryValues="@array/spinner_language"
+            app:key="@string/key_language_preference"
+            app:title="@string/language"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about_app">
+
+        <Preference
+            app:icon="@drawable/ic_about"
+            app:summary="@string/about_summary"
+            app:key="@string/key_about_app"
+            app:title="@string/about" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

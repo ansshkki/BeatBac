@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_exams"
+        android:icon="@drawable/ic_exams"
+        android:title="@string/title_exams"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/action_solution"
+        android:icon="@drawable/ic_solution"
+        android:title="@string/title_solution"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>

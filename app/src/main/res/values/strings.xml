@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">BeatBac</string>
+
+    <!--Bottom Navigation View-->
+    <string name="navigation_books">كتب</string>
+    <string name="navigation_exams">أسئلة دورات</string>
+    <string name="navigation_summaries">ملخصات</string>
+
+    <!--Toolbar Titles-->
+    <string name="title_books">الكتب المدرسية</string>
+    <string name="title_exams">أسئلة الدورات</string>
+    <string name="title_summaries">الملخصات</string>
+    <string name="title_solution">سلم التصحيح</string>
+
+    <!--Search and Filter-->
+    <string name="all">الكل</string>
+    <string name="scientific">علمي</string>
+    <string name="literary">أدبي</string>
+    <string name="search">البحث</string>
+    <string name="settings">الإعدادات</string>
+
+    <!--Cards Strings-->
+    <string name="download">تنزيل</string>
+    <string name="open">فتح</string>
+    <string name="exams">الأسئلة</string>
+    <string name="solutions">السلالم</string>
+    <string name="downloading_notification">جارٍ التحميل (انظر شريط الإشعارات)</string>
+
+    <!--Strings for Errors-->
+    <string name="error_message">حدث خطأ ما</string>
+    <string name="snackbar_connection_error_message">خطأ في الاتصال بالانترنت</string>
+    <string name="snackbar_no_connection_error_message">لا يوجد اتصال بالانترنت</string>
+    <string name="snackbar_server_error_message">خطأ في التنزيل, إذا استمر الخطأ أرسل لنا رسالة</string>
+    <string name="snackbar_another_is_downloading">تنزيل آخر قيد التشغيل, الرجاء الانتظار</string>
+    <string name="snackbar_file_not_exist">عذراً, هذه الدورة غير متوفرة</string>
+    <string name="snackbar_ok">حسناً</string>
+
+    <!--Dialogs-->
+    <string name="years_title">اختر الدورة:</string>
+    <string name="downloading">جارٍ التحميل…</string>
+    <string name="cancel">إلغاء</string>
+    <string-array name="years">
+        <item>أولى 2016</item>
+        <item>ثانية 2016</item>
+        <item>أولى 2017</item>
+        <item>ثانية 2017</item>
+        <item>أولى 2018</item>
+        <item>ثانية 2018</item>
+        <item>أولى 2019</item>
+        <item>ثانية 2019</item>
+    </string-array>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_main">أهلاً بك في BeatBac \n دليلك إلى النجاح!</string>
+    <string name="welcome_sub">اختر ما يناسب دراستك، وانطلق!</string>
+    <string name="section">الفرع</string>
+    <string name="religion">الديانة</string>
+    <string name="language">اللغة</string>
+    <string name="continue_button">الاستمرار</string>
+    <string name="empty_spinners_message">جميع المعلومات مطلوبة</string>
+    <string-array name="spinner_section">
+        <item>علمي</item>
+        <item>أدبي</item>
+    </string-array>
+    <string-array name="spinner_religion">
+        <item>إسلامية</item>
+        <item>مسيحية</item>
+    </string-array>
+    <string-array name="spinner_language">
+        <item>فرنسية</item>
+        <item>روسية</item>
+    </string-array>
+    <string name="islamic">إسلامية</string>
+    <string name="french">فرنسية</string>
+
+    <!-- Settings & About-->
+    <string name="title_activity_settings">الإعدادات</string>
+    <string name="studying_title">نوع الدراسة</string>
+    <string name="about">حول</string>
+    <string name="about_app">حول التطبيق</string>
+    <string name="about_dev">حول المطور</string>
+    <string name="about_summary">حول التطبيق والمطور</string>
+    <string name="send_feedback">أرسل رأيك</string>
+    <string name="send_feedback_des">أرسل التحسينات التي ترغب بها أو الأخطاء التي تواجهها</string>
+    <string name="feedback_email_subject">BeatBac Feedback</string>
+    <string name="app_des">Version 1.0\nbeatbac1@gmail.com</string>
+    <string name="beatbac_email">beatbac1@gmail.com</string>
+    <string name="anas_shakaki">أنس الشققي</string>
+    <string name="anas_email">ansshkki@gmail.com</string>
+    <string name="anas_telegram">\@Ansshkki</string>
+    <string name="tamim_kabbani">تميم القباني</string>
+    <string name="tamim_email">tamemkabbani24@gmail.com</string>
+    <string name="tamim_telegram">\@TamimKabbani</string>
+    <string name="about_not_found_email">لا يوجد برنامج إرسال الإيميل</string>
+
+    <!--Constants & Keys-->
+    <string name="books_folder" translatable="false">Books</string>
+    <string name="exams_folder" translatable="false">Exams</string>
+    <string name="key_folder" translatable="false">folder</string>
+    <string name="key_name" translatable="false">name</string>
+    <string name="key_file" translatable="false">file</string>
+    <string name="key_download_id" translatable="false">download_id</string>
+    <string name="key_book_name" translatable="false">book_name</string>
+    <string name="key_section_preference" translatable="false">section_preference</string>
+    <string name="key_religion_preference" translatable="false">religion_preference</string>
+    <string name="key_language_preference" translatable="false">language_preference</string>
+    <string name="key_opened" translatable="false">opened</string>
+    <string name="key_opened_pdf" translatable="false">key_opened_pdf</string>
+    <string name="key_about_app" translatable="false">about_app</string>
+    <string name="preference_filename" translatable="false">com.beatbac_preferences</string>
+
+</resources>

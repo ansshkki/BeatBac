@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PDFViewActivity">
+
+    <!-- The primary full-screen parentView. This can be replaced with whatever parentView
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/pdf_background"
+        android:keepScreenOn="true" />
+
+    <ProgressBar
+        android:id="@+id/pdf_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/error_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_error"
+        android:drawablePadding="8dp"
+        android:text="@string/error_message"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        android:visibility="gone" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:animateLayoutChanges="true"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/pdf_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:animateLayoutChanges="true"
+                android:theme="@style/ToolbarTheme" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
