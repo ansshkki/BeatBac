@@ -35,9 +35,12 @@
     <string name="snackbar_file_not_exist">عذراً, هذه الدورة غير متوفرة</string>
     <string name="snackbar_ok">حسناً</string>
 
-    <!--Dialogs-->
+    <!--Dialogs & Notifications-->
     <string name="years_title">اختر الدورة:</string>
-    <string name="downloading">جارٍ التحميل…</string>
+    <string name="downloading">جارٍ التنزيل…</string>
+    <string name="download_completed">اكتمل التنزيل</string>
+    <string name="download_canceled">تم إلغاء التنزيل</string>
+    <string name="download_error">حدث خطأ أثناء التنزيل</string>
     <string name="cancel">إلغاء</string>
     <string-array name="years">
         <item>أولى 2016</item>
@@ -108,5 +111,6 @@
     <string name="key_opened_pdf" translatable="false">key_opened_pdf</string>
     <string name="key_about_app" translatable="false">about_app</string>
     <string name="preference_filename" translatable="false">com.beatbac_preferences</string>
+    <string name="channel_id">com.beatbac.channel</string>
 
 </resources>

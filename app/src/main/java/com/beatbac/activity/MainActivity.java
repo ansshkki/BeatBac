@@ -333,10 +333,8 @@ public class MainActivity extends AppCompatActivity implements SearchAnimationTo
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Download files";
-            String description = "Progress bar that is shown when the app is downloading a file such as a book.";
             int importance = NotificationManager.IMPORTANCE_LOW;
-            NotificationChannel channel = new NotificationChannel("com.beatbac.channel", name, importance);
-            channel.setDescription(description);
+            NotificationChannel channel = new NotificationChannel(getString(R.string.channel_id), name, importance);
             NotificationManager notificationManager = this.getSystemService(NotificationManager.class);
             if (notificationManager != null) {
                 notificationManager.createNotificationChannel(channel);

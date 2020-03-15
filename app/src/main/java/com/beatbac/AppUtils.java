@@ -24,8 +24,8 @@ import androidx.core.content.ContextCompat;
 
 import com.beatbac.activity.MainActivity;
 import com.beatbac.activity.PDFViewActivity;
-import com.beatbac.model.Book;
 import com.beatbac.adapter.BookAdapter;
+import com.beatbac.model.Book;
 import com.beatbac.model.Exam;
 import com.downloader.Error;
 import com.downloader.OnDownloadListener;
@@ -57,9 +57,9 @@ public class AppUtils {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "com.beatbac.channel");
-        builder.setContentTitle("Downloading...")
-                .setContentText("Download is starting")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, context.getString(R.string.channel_id));
+        builder.setContentTitle(context.getString(R.string.downloading))
+                .setContentText(book.getName())
                 .setSmallIcon(android.R.drawable.stat_sys_download)
                 .setOngoing(true)
                 .setContentIntent(pendingIntent)
@@ -74,14 +74,16 @@ public class AppUtils {
                     long progressPercent = progress.currentBytes * 100 / progress.totalBytes;
                     holder.downloadPercent.setText((int) progressPercent + "%");
                     holder.downloadProgressBar.setProgress((int) progressPercent);
-                    builder.setContentText(getProgressDisplayLine(progress.currentBytes, progress.totalBytes))
+                    builder.setContentTitle(book.getName())
+                            .setContentText(getProgressDisplayLine(progress.currentBytes, progress.totalBytes))
                             .setSubText((int) progressPercent + "%");
                     builder.setProgress(100, (int) progressPercent, false);
                     notificationManager.notify(NOTIFICATION_ID, builder.build());
                 })
                 .setOnCancelListener(() -> {
                     finishDownload(holder);
-                    builder.setContentText("Download canceled")
+                    builder.setContentTitle(context.getString(R.string.download_canceled))
+                            .setContentText(book.getName())
                             .setSubText(null)
                             .setProgress(0, 0, false)
                             .setSmallIcon(R.drawable.ic_cancel)
@@ -96,7 +98,8 @@ public class AppUtils {
                         finishDownload(holder);
                         holder.download.setText(R.string.open);
                         holder.download.setIcon(ContextCompat.getDrawable(context, R.drawable.ic_open));
-                        builder.setContentText("Download completed")
+                        builder.setContentTitle(context.getString(R.string.download_completed))
+                                .setContentText(book.getName())
                                 .setSubText(null)
                                 .setSmallIcon(R.drawable.ic_done)
                                 .setProgress(0, 0, false)
@@ -120,7 +123,8 @@ public class AppUtils {
 
                         finishDownload(holder);
 
-                        builder.setContentText("Download error")
+                        builder.setContentTitle(context.getString(R.string.download_error))
+                                .setContentText(book.getName())
                                 .setSubText(null)
                                 .setProgress(0, 0, false)
                                 .setSmallIcon(R.drawable.ic_error)
