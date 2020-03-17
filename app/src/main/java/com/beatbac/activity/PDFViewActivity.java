@@ -29,6 +29,7 @@ import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
+import com.github.barteksc.pdfviewer.util.Constants;
 
 import java.io.File;
 import java.util.Locale;
@@ -141,6 +142,8 @@ public class PDFViewActivity extends AppCompatActivity {
         pdfView.setMinZoom(0.5f);
         pdfView.setMidZoom(1f);
         pdfView.setMaxZoom(2f);
+        pdfView.useBestQuality(false);
+        Constants.Cache.CACHE_SIZE = 40;
 
         pdfView.fromFile(new File(AppUtils.getRootDirPath(this) + "/" + folder + "/" + file + ".pdf"))
                 .onLoad(nbPages -> progressBar.setVisibility(View.GONE))
